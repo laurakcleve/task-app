@@ -1,0 +1,11 @@
+<%= form_for(@task) do |f| %>
+<div class="field">
+	<%= f.label :task %><br>
+	<%= f.text_field :name %>
+</div>
+<div class="actions">
+	<%= f.submit "Done" %>
+</div>
+<% end %>
+
+<%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
