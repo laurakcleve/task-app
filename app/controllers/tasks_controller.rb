@@ -9,7 +9,11 @@ class TasksController < ApplicationController
 
 	def create
 		@task = Task.create(task_params)
-		redirect_to tasks_path
+		# redirect_to tasks_path
+		respond_to do |format|
+			format.html { redirect_to tasks_path }
+			format.js
+		end
 	end
 
 	def show

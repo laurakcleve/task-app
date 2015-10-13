@@ -1,0 +1,10 @@
+<% if !task.complete? %>
+  <li>
+    <%= link_to complete_task_path(task.id), method: :patch do %>
+      <input type="checkbox">
+    <% end %>
+    <%= link_to edit_task_path(task) do %>
+      <%= task.name %>
+    <% end %>
+  </li>
+<% end %>

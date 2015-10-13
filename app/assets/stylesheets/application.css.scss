@@ -16,3 +16,27 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+
+body {
+	font-family: 'Catamaran';
+}
+
+.container {
+	width: 700px;
+	margin: 50px auto 0;
+}
+
+.tasks {
+	margin: 30px 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;    
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
