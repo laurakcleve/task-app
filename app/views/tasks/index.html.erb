@@ -5,5 +5,5 @@
 
 <%= form_for [@task, @tasks.new], remote: true do |f| %>
   <%= f.text_field :name, placeholder: "New Task" %>
-  <%= f.submit %>
+  <%= f.submit "Add" %>
 <% end %>
