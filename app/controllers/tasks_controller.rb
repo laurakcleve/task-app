@@ -37,9 +37,14 @@ class TasksController < ApplicationController
 	end
 
 	def complete
+		@tasks = Task.all
 		@task = Task.find(params[:id])
 		@task.update_attribute(:completed, true)
-		redirect_to tasks_path
+		# redirect_to tasks_path
+		respond_to do |format|
+			format.html { redirect_to tasks_path }
+			format.js
+		end
 	end
 
 	private

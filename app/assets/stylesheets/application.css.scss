@@ -33,7 +33,8 @@ body {
 }
 
 li {
-  list-style-type: none;    
+  list-style-type: none;
+  margin-bottom: 10px;
 }
 
 input[type="checkbox"] {
@@ -41,8 +42,8 @@ input[type="checkbox"] {
 }
 
 .checkbox {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   position: relative;
   display: inline-block;
   margin-right: 10px;
@@ -60,6 +61,14 @@ input[type="checkbox"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 1px 1px 0 #fff, inset 1px 1px 0 #bbb;
+}
+
+i.fa-check {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  font-size: 18px;
+  display: none;
 }
 
 a {
