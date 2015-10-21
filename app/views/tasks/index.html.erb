@@ -1,9 +1,11 @@
-<h1>Tasks</h1>
-<ul class="tasks" id="tasks">
-  <%= render @tasks %>
-</ul>
+<div class="tasks-container">
+  <h1>Tasks</h1>
+  <ul class="tasks" id="tasks">
+    <%= render @tasks %>
+  </ul>
 
-<%= form_for [@task, @tasks.new], remote: true do |f| %>
-  <%= f.text_field :name, placeholder: "New Task" %>
-  <%= f.submit "Add" %>
-<% end %>
+  <%= form_for [@task, @tasks.new], remote: true do |f| %>
+    <%= f.text_field :name, placeholder: "New Task" %>
+    <%= f.submit "Add" %>
+  <% end %>
+</div>

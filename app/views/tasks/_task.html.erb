@@ -7,7 +7,7 @@
         <i class="fa fa-check"></i>
       </div>
     <% end %>
-    <%= link_to edit_task_path(task) do %>
+    <%= link_to edit_task_path(task), class: 'task-text' do %>
       <%= task.name %>
     <% end %>
   </li>

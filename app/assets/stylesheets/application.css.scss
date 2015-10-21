@@ -18,13 +18,37 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Catamaran);
 
-body {
-	font-family: 'Catamaran';
+html {
+  height: 100%;
 }
 
-.container {
+body {
+	font-family: 'Catamaran';
+  background: rgba(31,89,107,1);
+  background: -moz-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,89,107,1)), color-stop(100%, rgba(33,41,58,1))) no-repeat;
+  background: -webkit-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
+  background: -o-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
+  background: -ms-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
+  background: linear-gradient(to bottom, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f596b', endColorstr='#21293a', GradientType=0 );
+  color: #fff;
+  border-radius: 20px;
+}
+
+.tasks-container {
 	width: 700px;
 	margin: 50px auto 0;
+  padding: 40px 50px;
+  background: #00c3e2;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 0 #368794;
+}
+
+.tasks-container h1 {
+  margin: 0;
+  line-height: 35px;
 }
 
 .tasks {
@@ -34,7 +58,18 @@ body {
 
 li {
   list-style-type: none;
-  margin-bottom: 10px;
+  padding: 10px;
+  position: relative;
+  height: 40px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #5FD7EA;
+  }
+}
+
+.task-text {
+  color: #fff;
+  margin: 0 0 0 35px;
+  line-height: 44px;
 }
 
 input[type="checkbox"] {
@@ -44,9 +79,10 @@ input[type="checkbox"] {
 .checkbox {
   width: 22px;
   height: 22px;
-  position: relative;
+  position: absolute;
   display: inline-block;
   margin-right: 10px;
+  top: 18px;
 }
 
 .checkbox label {
@@ -57,10 +93,8 @@ input[type="checkbox"] {
   top: 3px;
   left: 0;
   margin-right: 5px;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
+  background: #139DB3;
   border-radius: 4px;
-  box-shadow: 1px 1px 0 #fff, inset 1px 1px 0 #bbb;
 }
 
 i.fa-check {
@@ -68,11 +102,12 @@ i.fa-check {
   top: 5px;
   left: 2px;
   font-size: 18px;
-  display: none;
+  color: #fff;
+  visibility: hidden;
 }
 
 i.fa-check.show {
-  display: block;
+  visibility: visible;
 }
 
 a {
@@ -91,17 +126,18 @@ input#task_name {
 }
 
 input[type="submit"] {
-  height: 39px;
+  height: 41px;
   padding: 10px 15px;
   margin: 0;
-  border: 1px solid #bbb;
+  border: none;
   border-radius: 3px;
-  color: #555;
+  color: #fff;
   font-family: 'Catamaran';
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  line-height: 18px;
+  line-height: 24px;
   text-transform: uppercase;
   cursor: pointer;
+  background: #fe626d;
 }
