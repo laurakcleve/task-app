@@ -2,3 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# $(document).on "page:change", ->
+#   $('.checkbox').click (event) ->
+#     event.preventDefault()
+#     $('i.fa-check').fadeIn()
+#     setTimeout 2000
+
+# $('.checkbox').click ->
+#     # alert $(this).find('i').class()
+$ ->
+  $('body').on 'click', '.checkbox', ->
+    console.log 'checkbox clicked'
+    $(this).find('i').addClass 'show'
+    return

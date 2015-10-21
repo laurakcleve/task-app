@@ -71,6 +71,10 @@ i.fa-check {
   display: none;
 }
 
+i.fa-check.show {
+  display: block;
+}
+
 a {
 	text-decoration: none;
 	color: #000;

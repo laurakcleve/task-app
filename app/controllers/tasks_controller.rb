@@ -40,6 +40,9 @@ class TasksController < ApplicationController
 		@tasks = Task.all
 		@task = Task.find(params[:id])
 		@task.update_attribute(:completed, true)
+
+		sleep 1
+
 		# redirect_to tasks_path
 		respond_to do |format|
 			format.html { redirect_to tasks_path }

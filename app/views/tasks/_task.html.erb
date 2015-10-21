@@ -1,10 +1,10 @@
 <% if !task.complete? %>
   <li>
-    <%= link_to complete_task_path(task.id), method: :patch, remote: true do %>
-      <div class="checkbox" id="checkbox">
-        <input type="checkbox" id="checkbox-input">
-        <label for="checkbox-input"></label>
-        <i class="fa fa-check" id="check-icon"></i>
+    <%= link_to complete_task_path(task.id), id: task.id, method: :patch, remote: true do %>
+      <div class="checkbox">
+        <input type="checkbox">
+        <label></label>
+        <i class="fa fa-check"></i>
       </div>
     <% end %>
     <%= link_to edit_task_path(task) do %>
