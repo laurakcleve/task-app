@@ -1,7 +1,40 @@
 <%= form_for(@task) do |f| %>
-  <%= f.label :task %><br>
   <%= f.text_field :name %>
-  <%= f.submit "Done" %>
-<% end %>
+  
+  <%= link_to "Delete", task_path(@task), class: 'button button-delete', method: :delete, data: { confirm: "Are you sure?" } %>
 
-<%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+  <br>
+
+<!--   <div class="current-tags" id="current-tags">
+    <%#= render @tags %>
+  </div>
+
+  <div class="add-tag" id="add-tag">
+    <a href="#">Add Tag...</a>
+  </div>
+  
+  <ul class="unused-tags" id="unused-tags">
+    
+    <%# @task.unused_tags.each do |tag| %>
+      <li><%#= tag.name %></li>
+    <%# end %>
+    
+    <li id="new-tag">
+      <%#= form_for [@tag, @task.tags.build], remote: true do |f| %>
+        <%#= f.text_field :name, placeholder: "Create New Tag" %>
+        <%#= f.submit class: 'button-tag-create' %>
+      <%# end %>
+    </li>
+
+  </ul> -->
+
+  <p>Tags</p>
+  <%= f.text_field :tag_list %>
+
+
+
+  <br>
+  
+  <%= link_to "Cancel", tasks_path, class: 'button button-cancel' %>
+  <%= f.submit "Done", class: 'button button-done' %>
+<% end %>

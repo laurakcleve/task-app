@@ -12,6 +12,6 @@
 #     # alert $(this).find('i').class()
 $ ->
   $('body').on 'click', '.checkbox', ->
-    console.log 'checkbox clicked'
+    console.log 'clicked'
     $(this).find('i').addClass 'show'
     return

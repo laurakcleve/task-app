@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
 	def create
 		@task = Task.create(task_params)
-		# redirect_to tasks_path
+		
 		respond_to do |format|
 			format.html { redirect_to tasks_path }
 			format.js
@@ -18,10 +18,11 @@ class TasksController < ApplicationController
 
 	def show
 		@task = Task.find(params[:id])
-	end
+	end	
 
 	def edit
 		@task = Task.find(params[:id])
+		@tags = Tag.all
 	end
 
 	def update
@@ -41,9 +42,8 @@ class TasksController < ApplicationController
 		@task = Task.find(params[:id])
 		@task.update_attribute(:completed, true)
 
-		sleep 1
+		sleep 0.6
 
-		# redirect_to tasks_path
 		respond_to do |format|
 			format.html { redirect_to tasks_path }
 			format.js
@@ -53,6 +53,6 @@ class TasksController < ApplicationController
 	private
 
 		def task_params
-			params.require(:task).permit(:name)
+			params.require(:task).permit(:name, :tag_list)
 		end
 end
