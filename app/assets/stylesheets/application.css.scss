@@ -24,15 +24,8 @@ html {
 
 body {
 	font-family: 'Catamaran';
-  background: rgba(31,89,107,1);
-  background: -moz-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,89,107,1)), color-stop(100%, rgba(33,41,58,1))) no-repeat;
-  background: -webkit-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
-  background: -o-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
-  background: -ms-linear-gradient(top, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
-  background: linear-gradient(to bottom, rgba(31,89,107,1) 0%, rgba(33,41,58,1) 100%) no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f596b', endColorstr='#21293a', GradientType=0 );
-  color: #fff;
+  background-color: #e2dedd;
+  color: #928a87;
   border-radius: 20px;
 }
 
@@ -40,8 +33,8 @@ body {
 	width: 700px;
 	margin: 50px auto 0;
   padding: 40px 50px;
-  background: #7297a9;
-  border-radius: 15px;
+  background: #fbf9f8;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -64,12 +57,12 @@ body {
   position: relative;
   height: 40px;
   &:not(:last-child) {
-    border-bottom: 1px solid #86A9AF;
+    border-bottom: 1px solid #ece9e9;
   }
 }
 
 .task-text {
-  color: #fff;
+  color: #928a87;
   margin: 0 10px 0 35px;
   line-height: 44px;
 }
@@ -95,7 +88,7 @@ input[type="checkbox"] {
   top: 3px;
   left: 0;
   margin-right: 5px;
-  background: #52728E;
+  background: #E0DBD8;
   border-radius: 4px;
 }
 
@@ -140,7 +133,10 @@ input#task_name {
   line-height: 24px;
   text-transform: uppercase;
   cursor: pointer;
-  background: #fe626d;
+  background: #e68764;
+  height: 41px;
+  box-sizing: border-box;
+  display: inline-block;
   
   &-delete {
     color: #fff;
@@ -153,6 +149,7 @@ input#task_name {
 
   &-cancel {
     background: #ccc;
+    height: 41px;
   }
 }
 
@@ -176,12 +173,23 @@ input#task_name {
   visibility: visible;
 }
 
-
 .tag {
   text-transform: uppercase;
   font-size: 12px;
-  background: #5F7986;
+  color: #ECF4F5;
+  background: #86bfc6;
   border-radius: 4px;
   padding: 0 5px;
   margin: 0 5px 0 0;
+}
+
+.input-tags {
+  height: 18px;
+  width: 220px;
+  padding: 7px 15px;
+  font-family: 'Catamaran';
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #b9b9b9;
+  margin-bottom: 20px;
 }

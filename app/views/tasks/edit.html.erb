@@ -5,33 +5,8 @@
 
   <br>
 
-<!--   <div class="current-tags" id="current-tags">
-    <%#= render @tags %>
-  </div>
-
-  <div class="add-tag" id="add-tag">
-    <a href="#">Add Tag...</a>
-  </div>
-  
-  <ul class="unused-tags" id="unused-tags">
-    
-    <%# @task.unused_tags.each do |tag| %>
-      <li><%#= tag.name %></li>
-    <%# end %>
-    
-    <li id="new-tag">
-      <%#= form_for [@tag, @task.tags.build], remote: true do |f| %>
-        <%#= f.text_field :name, placeholder: "Create New Tag" %>
-        <%#= f.submit class: 'button-tag-create' %>
-      <%# end %>
-    </li>
-
-  </ul> -->
-
-  <p>Tags</p>
-  <%= f.text_field :tag_list %>
-
-
+  <br>Tags<br>
+  <%= f.text_field :tag_list, class: 'input-tags' %>
 
   <br>
   
