@@ -4,6 +4,6 @@
 </ul>
 
 <%= form_for [@task, @tasks.new], remote: true do |f| %>
-  <%= f.text_field :name, placeholder: "New Task" %>
-  <%= f.submit "Add", class: 'button' %>
+  <%= f.text_field :name, placeholder: "New Task", class: 'input-task' %>
+  <%= f.submit "Add", class: 'button button-add' %>
 <% end %>
